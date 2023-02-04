@@ -1,0 +1,34 @@
+html{
+    font-size:62.5%;
+    font-family: var(--font-family);
+}
+
+.grid{
+    display:grid;
+    padding:35px;
+    gap:2rem;
+    grid-template-areas:
+    "video video propaganda"
+    "video video recomendados"
+    "descricao descricao recomendados";
+}
+
+.video{
+    grid-area:video;
+    background-color: aquamarine;
+}
+
+.propaganda{
+    grid-area:propaganda;
+    background-color: hotpink;
+}
+
+.recomendados{
+    grid-area:recomendados;
+    background-color: lightskyblue;
+}
+
+.descricao{
+    grid-area:descricao;
+    background-color: crimson;
+}
