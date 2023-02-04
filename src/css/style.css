@@ -1,12 +1,29 @@
 html{
     font-size:62.5%;
     font-family: var(--font-family);
+    font-weight:var(--font-weight-texto);
 }
+
+body{
+    height: 100vh;
+}
+
+.video img,.propaganda img{
+    width:100%;
+    height: 100%;
+}
+
+.caixa-recomendado img{
+    max-width: 80%;
+}
+
 
 .grid{
     display:grid;
     padding:35px;
+    height: 100%;
     gap:2rem;
+    grid-template: 6fr 22fr 13fr / repeat(3,1fr);
     grid-template-areas:
     "video video propaganda"
     "video video recomendados"
@@ -15,20 +32,71 @@ html{
 
 .video{
     grid-area:video;
-    background-color: aquamarine;
 }
 
 .propaganda{
     grid-area:propaganda;
-    background-color: hotpink;
+    position: relative;
 }
 
 .recomendados{
     grid-area:recomendados;
-    background-color: lightskyblue;
+    display:flex;
+    flex-direction: column;
+    gap:3rem;
 }
 
 .descricao{
     grid-area:descricao;
-    background-color: crimson;
+    display:flex;
+    height: 100%;
+    flex-direction: column;
+    gap:0.8rem;
+}
+
+.titulo{
+    font-weight: var(--font-weight-titulo);
+}
+
+.titulo-video{
+    font-size:2.5rem;
+}
+
+.visualizacoes{
+    font-size: 1.8rem;
+}
+
+.texto-descricao{
+    font-size: 2.1rem;
+    padding-top:1rem;
+}
+
+.texto-propaganda{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:1.1rem;
+}
+
+.caixa-recomendado{
+    display:flex;
+    gap:0.4rem;
+    flex-basis:25%
+}
+
+.dados-recomendado{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dados-recomendado h3{
+    font-size: 1.9rem;
+    padding-bottom:0.6rem;
+}
+
+.dados-recomendado p{
+    font-size:1.5rem;
+    padding-top:1.5rem;
 }
